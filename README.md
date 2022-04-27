@@ -1,1 +1,1 @@
-Blockchain basic system
+Typescript Blockchain
