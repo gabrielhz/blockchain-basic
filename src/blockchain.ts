@@ -35,7 +35,11 @@ export class Blockchain {
             blockHash: hash(JSON.stringify(payload))
         },
         payload
+        }
     }
+
+    get chain() {
+        return this.#chain
     }
 
 
@@ -75,7 +79,7 @@ export class Blockchain {
                 const reducedHash = blockHash.slice(0, 12)
                 const miningTime = (final - init) / 1000
 
-                console.log(`Block #${block.order} mined in ${miningTime}s. Hash${reducedHash} (${nonce} attempts)`)
+                console.log(`Block #${block.order} mined in ${miningTime}s. Hash ${reducedHash} (${nonce} attempts)`)
 
                 return {
                     minedBlock: {
